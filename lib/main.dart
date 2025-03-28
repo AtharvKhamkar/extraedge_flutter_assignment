@@ -1,24 +1,24 @@
+import 'package:extraedge_spacex/app.dart';
 import 'package:extraedge_spacex/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // String path = join(await getDatabasesPath(), 'test.db');
+  // Database db =
+  //     await openDatabase(path, version: 1, onCreate: (db, version) async {
+  //   await db.execute('CREATE TABLE test (id INTEGER PRIMARY KEY, name TEXT)');
+  // });
+  // print('Database opened at: $path');
+  runApp(
+      // const MaterialApp(
+      //   home: Scaffold(
+      //     body: Center(
+      //       child: Text('sample app'),
+      //     ),
+      //   ),
+      // ),
+      const App());
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: HomeScreen(),
-    );
-  }
-}
-
